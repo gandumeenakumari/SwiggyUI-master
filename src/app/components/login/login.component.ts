@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  falock=faLock;
   constructor(private loginAuth: AuthService,private router:Router ) { }
 
   ngOnInit(): void {

@@ -12,6 +12,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductComponent } from './components/product/product.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -22,14 +26,18 @@ import { HeaderComponent } from './components/header/header.component';
     PageNotFoundComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule, 
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthService,

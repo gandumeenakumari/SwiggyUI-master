@@ -1,7 +1,7 @@
 <p class="text-center ps-3" [ngClass]="isUserValid?'text-success pb-1':'text-danger pb-1'">
     {{displayMsg}}</p>
 
-
+<div class="container vh-100">
 <form [formGroup]="loginform" (ngSubmit)="loginSubmitted()" class="border p-3 rounded-3" >
     <div class="row g-0">
         <div class="col text-center bg-light p-2 mb-3">
@@ -38,6 +38,9 @@
                 <button type="submit" [disabled]="false" class="btn btn-primary">Submit</button>
             </div>
         </div>
+        <div class="card-footer text-right">
+            <small><a routerLink="../forgot-password">Forgot Password</a></small>
+        </div>
         <div class="row">
             <div class="col mt-3">
                 <span class="me-2">Don't have Account?</span><a routerLink="/register">Register</a>
@@ -45,3 +48,5 @@
         </div>
     </div>
 </form>
+
+</div>
