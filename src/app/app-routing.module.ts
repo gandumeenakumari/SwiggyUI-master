@@ -43,7 +43,7 @@ component:CartComponent
   component:OrdersComponent
 },
 {
-path:'Cart',
+path:'cart',
 component:CartComponent
 },
 {

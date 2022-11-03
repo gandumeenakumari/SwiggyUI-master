@@ -11,6 +11,7 @@ export class ProductService {
 
   baseApiUrl:string=environment.baseApiUrl;
   constructor(private http:HttpClient) { }
+  p:Products[]=[];
   public GetAllProducts():Observable<Products[]>{
     return this.http.get<Products[]>('https://localhost:44367/api/Products');
   }
@@ -22,5 +23,7 @@ export class ProductService {
   {
     return this.http.get<Orders[]>('https://localhost:44367/api/Orders');
   }
-  
+  public addtoCart(product:Products):Observable<any>{
+    return this.http.post('https://localhost:44367/api/Orders/',{product});
+  }
 }
