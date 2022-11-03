@@ -1,18 +1,75 @@
-<section class="show pizza">
-    <div class="container">
+
+
+    <section class="show pizza">
         <h1 class="text-center">Products</h1>
         <div class="row">
             <div class="col-lg-3" *ngFor="let p of products">
-                <div class="box">
-                    <img src="{{p.img}}"width="100%">
-                    <h4>{{p.ProductId}}</h4>
-                    <h4>{{p.ProductName}}</h4>
-                    <h4>{{p.Category}}</h4>
-                    <h4>{{p.Quantity}}</h4>
-                    <p>{{p.Price  | currency:'INR'}}</p>
-                    <a class="buybtn" [routerLink]="['/Orders']">Buy Now &nbsp;<i class="bi bi-bag"></i></a>
+                <div>
+                    <h4><img alt="food" src="{{p.img}}"width="100%"></h4>
+                    <h4>{{p.productName}}</h4>
+                    <h4>{{p.category}}</h4>
+                    <p>{{p.price  | currency:'INR'}}</p>
+                    <a class="cart"  [routerLink]="['/Cart',p.productId]"> Add to Cart &nbsp;<i class="bi bi-bag"></i></a>
+                    <a class="buybtn margin-right"  [routerLink]="['/viewproduct',p.productId]">Order &nbsp;<i class="bi bi-bag"></i></a>
+                   
                 </div>
             </div>
         </div>
-    </div>
 </section>
+
+<!--
+    <div class="row">
+    <div *ngFor="let p of products" class="shadow-lg col-sm-4 p-3">
+        <div class="card">
+            <div class="img-wrapper">
+                <img class="card-img-top" src="{{p.img}}">
+            </div>
+            <div class="card-body p-2">
+                <h2>Item:{{p.productName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity:{{p.quantity}}</h2>
+                <h2>Price:{{p.price}}</h2>
+            </div>
+            <div class="card-body">
+                <div class="btn-wrapper text-center d-flex justify-content-between">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+-->
+
+
+<!--
+    <div class="container my-5">
+    <h1 class="mb-3">Products</h1>
+    <table class="table" *ngIf="products && products.length>0">
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>Image</th>
+            <th>ProductName</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.productId}}</td>
+            <td>{{p.img}}</td>
+            <td>{{p.productName}}</td>
+            <td>{{p.category}}</td>
+            <td>{{p.quantity}}</td>
+            <td>{{p.price}}</td>
+            
+        </tr>
+    </tbody>
+    </table>
+    <p *ngIf="!products || products.length <=0">No pizzas</p>
+</div>
+
+-->
+
+
+

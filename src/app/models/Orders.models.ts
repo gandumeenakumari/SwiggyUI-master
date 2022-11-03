@@ -1,8 +1,6 @@
-export interface Products
+export interface Orders
 {
-
-    
-    productId:number;
+    orderId:number;
     img:string;
     productName:string;
     category:string;

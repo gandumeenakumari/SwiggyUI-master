@@ -1,0 +1,16 @@
+<section class="show pizza">
+    <h1 class="text-center">Orders</h1>
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <h4><img alt="food" src="{{products.img}}"width="100%"></h4>
+                <h4>{{products.productName}}</h4>
+                <h4>{{products.category}}</h4>
+                <p>{{products.price  | currency:'INR'}}</p>
+                
+                    <a class="buybtn margin-right"  [routerLink]="['/addorder',products.productId]">  &nbsp;<i class="bi bi-bag"></i></a>
+                   
+            </div>
+        </div>
+    </div>
+</section>

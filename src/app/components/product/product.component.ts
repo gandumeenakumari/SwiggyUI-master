@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Products } from 'src/app/models/Products.model';
 import { ProductService } from 'src/app/services/product.service';
@@ -7,8 +8,8 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  products:any;
-  constructor(private productsService:ProductService) {
+  products:Products[]=[];
+  constructor(private productsService:ProductService,private httpclient:HttpClient) {
 
    }
 

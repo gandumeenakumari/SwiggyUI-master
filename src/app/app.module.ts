@@ -16,6 +16,10 @@ import { ProductComponent } from './components/product/product.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OrdersComponent } from './components/orders/orders.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ViewproductComponent } from './components/viewproduct/viewproduct.component';
+import { AddorderComponent } from './componenets/addorder/addorder.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     HeaderComponent,
     ProductComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    OrdersComponent,
+    CartComponent,
+    ViewproductComponent,
+    AddorderComponent
   ],
   imports: [
     BrowserModule,

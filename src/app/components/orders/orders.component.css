@@ -1,0 +1,17 @@
+.box
+{
+    padding: 10px 10px;
+} 
+.box img
+{
+    width: 10%;
+    height: 250px;
+    object-fit:none;
+    border-radius: 5px;
+}
+.box h1 
+{
+    font-size: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}

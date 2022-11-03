@@ -1,0 +1,48 @@
+
+<!--
+      <h1 class="text-center">Products</h1>
+            
+                    <h4><img class="" alt="food" src="{{products.img}}"width="100%"></h4>
+                    <h4>{{products.productName}}</h4>
+                    <h4>{{products.category}}</h4>
+                    <p>{{products.price  | currency:'INR'}}</p>
+-->
+  
+                   
+        <!--
+                    <section class="show pizza">
+                        <h1 class="text-center">Orders</h1>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div>
+                                    <h4><img alt="food" src="{{products.img}}"width="100%"></h4>
+                                    <h4>{{products.productName}}</h4>
+                                    <h4>{{products.category}}</h4>
+                                    <p>{{products.price  | currency:'INR'}}</p>
+                                   
+                                    <button type="submit" class="btn btn-primary">Place Order</button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                </section>-->
+
+
+                <section class="show pizza">
+                    <h1 class="text-center">Orders</h1>
+                    
+                    <div class="row">
+                        <div class="col-lg-3" *ngFor="let o of orders">
+                            <div>
+                                <h4><img alt="food" src="{{o.img}}"width="100%"></h4>
+                                <h4>Order Id:{{o.orderId}}</h4>
+                                <h4>{{o.productName}}</h4>
+                                <h4>{{o.category}}</h4>
+                                <p>{{o.price  | currency:'INR'}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+            </section>
+            
